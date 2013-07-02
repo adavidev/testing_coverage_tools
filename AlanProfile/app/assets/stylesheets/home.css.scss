@@ -1,0 +1,56 @@
+// Place all the styles related to the home controller here.
+
+div{
+  transition: all .5s;
+}
+
+
+.pull-back {
+  -webkit-transform: translateX(-60%)  translateY(-60%);
+}
+
+.top {
+  box-shadow: inset 0px 0px 2px 1px rgb(58, 55, 55);
+  z-index:1000;
+  width: 50%;
+  height: 50%;
+
+}
+
+.profile {
+    top: 0%;
+  left: 0%;
+  position: absolute;
+  background-color: #2FA56C;
+}
+
+.profile-innards {
+    width: 50%;
+  height: 50%;
+  top: 0%;
+  left: 0%;
+  position: absolute;
+  background-color: #0F6B3F;
+//  box-shadow: inset 0px 0px 4px 2px rgb(58, 55, 55);
+}
+
+.blog {
+  top: 0%;
+  left: 50%;
+  position: absolute;
+  background-color: #326F97;
+}
+
+.resume {
+  top: 50%;
+  left: 0%;
+  position: absolute;
+  background-color: #EDA244;
+}
+
+.my_work {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  background-color: #ED6F44;
+}
