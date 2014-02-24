@@ -1,0 +1,71 @@
+<style>
+.CustomDropdown select {
+  // background: transparent;
+  font-size: 14px;
+  line-height: 1;
+  border: 0;
+  border-radius: 0px;
+  height: 100%;
+  width:100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background:white !important;
+  padding:6px !important;
+}
+
+.CustomDropdown {
+  height: 30px;
+  overflow: hidden;
+  border-radius:5px;
+  border: 1px solid #9a9b9c;
+  position:relative;
+  width: 200px;
+}
+
+.CustomDropdown .background{
+  background:white;
+  position:absolute;
+  height:100%;
+  width:100%;
+  z-index:-2;
+}
+
+.CustomDropdown .button{
+  pointer-events:none;
+  position:absolute;
+  right:0%;
+  top:0%;
+  display:block;
+  height: 100%;
+  width:30px;
+  border:1px solid #9a9b9c;
+  margin:-1px;
+  z-index:1;
+  box-sizing:content-box;
+  -moz-box-sizing:content-box; /* Firefox */
+}
+
+.CustomDropdown .button span{
+  border:5px solid #4d4f53;
+  border-right-color:transparent;
+  border-left-color:transparent;
+  border-bottom:none;
+  top:18px;
+  position:relative;
+  left:9px;
+}
+
+.CustomDropdown .button{
+  background: rgb(255,255,255); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgb(255,255,255) 0%, rgb(204,204,204) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgb(255,255,255)), color-stop(100%,rgb(204,204,204))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  rgb(255,255,255) 0%,rgb(204,204,204) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  rgb(255,255,255) 0%,rgb(204,204,204) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  rgb(255,255,255) 0%,rgb(204,204,204) 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  rgb(255,255,255) 0%,rgb(204,204,204) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#cccccc',GradientType=0 ); /* IE6-9 */
+}
+
+</style>
+
+<div class="CustomDropdown"><span class="background"></span><select class="account-classification" my-id="10000"><option value="">-- choose type --</option><option value="0">Cash</option><option value="1">Receivable</option><option value="2">Inventory</option><option value="3">Capital Asset</option><option value="4">Assets</option><option value="5">Debt</option><option value="6">Payable</option><option value="7">Payables</option><option value="8">Liabilities</option><option value="9">Liabilties</option><option value="10">Equity</option><option value="11">Income</option><option value="12">Cost of Goods Sold</option><option value="13">Expense</option><option value="14">Expenses</option></select><div class="button"><span></span></div></div>

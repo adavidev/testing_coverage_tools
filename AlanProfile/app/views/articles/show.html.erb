@@ -1,0 +1,6 @@
+<div id="article<%= @article.id %>">
+  <h1 id="heading"><%= @article.title %></h1>
+  <div id=<%="article_#{@article.id}_contents" %>>
+    <%= render partial: "articles/examples/#{@article.content}" %>
+  </div>
+</div>

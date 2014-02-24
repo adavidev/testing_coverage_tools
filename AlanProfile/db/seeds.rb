@@ -5,3 +5,6 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+Article.create!(:title => "Test Article", content: "test_content")
+Article.create!(:title => "Dropdown Replacement", content: "dropdown_replace")
+

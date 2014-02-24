@@ -7,8 +7,13 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div id="header">
+  <%= link_to("Articles", articles_path, class: "option selected") %>
+</div>
 
+<div id="main-content">
 <%= yield %>
+</div>
 
 </body>
 </html>
