@@ -21,18 +21,20 @@ group :assets do
 end
 
 gem 'jquery-rails'
-gem 'pry'
+
+group :development, :test do
+  gem 'pry'
+  gem "rspec-rails"
+end
 
 group :development do
-  gem "rspec-rails"
   gem "webrat"
 end
 
 group :test do
+  gem 'simplecov', '~> 0.7.1', :require => false
   gem 'travis-lint'
   gem 'cucumber-rails', :require => false
-  gem "rspec-rails"
-  gem "webrat"
   gem 'database_cleaner'
 end
 

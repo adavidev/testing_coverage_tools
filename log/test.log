@@ -4119,3 +4119,74 @@ Processing by ArticlesController#index as HTML
   Rendered articles/index.html.erb within layouts/application (0.6ms)
 Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.1ms)
   [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (3.4ms)[0m  [1mINSERT INTO "articles" ("content", "created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "test_content"], ["created_at", Tue, 25 Feb 2014 06:15:00 UTC +00:00], ["description", "This is a description of the article"], ["title", "Pizza"], ["updated_at", Tue, 25 Feb 2014 06:15:00 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "articles" ("content", "created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["content", "test_content"], ["created_at", Tue, 25 Feb 2014 06:15:00 UTC +00:00], ["description", "This is also a description of some other article"], ["title", "Breadsticks"], ["updated_at", Tue, 25 Feb 2014 06:15:00 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/articles" for 127.0.0.1 at 2014-02-25 01:15:00 -0500
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" 
+  Rendered articles/examples/_test_content.html.erb (0.5ms)
+  Rendered articles/index/_article.html.erb (6.2ms)
+  Rendered articles/examples/_test_content.html.erb (0.0ms)
+  Rendered articles/index/_article.html.erb (0.6ms)
+  Rendered articles/index.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 44ms (Views: 42.4ms | ActiveRecord: 0.1ms)
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."title" = 'Pizza' LIMIT 1[0m
+  [1m[35m (0.8ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "articles" ("content", "created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "test_content"], ["created_at", Tue, 25 Feb 2014 06:15:00 UTC +00:00], ["description", nil], ["title", "Test Article"], ["updated_at", Tue, 25 Feb 2014 06:15:00 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/articles" for 127.0.0.1 at 2014-02-25 01:15:00 -0500
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT "articles".* FROM "articles" [0m
+  Rendered articles/examples/_test_content.html.erb (0.0ms)
+  Rendered articles/index/_article.html.erb (0.7ms)
+  Rendered articles/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.7ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "articles" ("content", "created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "test_content"], ["created_at", Tue, 25 Feb 2014 06:15:00 UTC +00:00], ["description", nil], ["title", "Test Article"], ["updated_at", Tue, 25 Feb 2014 06:15:00 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/articles" for 127.0.0.1 at 2014-02-25 01:15:00 -0500
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT "articles".* FROM "articles" [0m
+  Rendered articles/examples/_test_content.html.erb (0.0ms)
+  Rendered articles/index/_article.html.erb (0.6ms)
+  Rendered articles/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.1ms)
+Started GET "/articles/1" for 127.0.0.1 at 2014-02-25 01:15:00 -0500
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."id" = 1 LIMIT 1
+  Rendered articles/examples/_test_content.html.erb (0.0ms)
+  Rendered articles/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "articles" ("content", "created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["content", "test_content"], ["created_at", Tue, 25 Feb 2014 06:15:00 UTC +00:00], ["description", nil], ["title", "Bleu"], ["updated_at", Tue, 25 Feb 2014 06:15:00 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/articles" for 127.0.0.1 at 2014-02-25 01:15:00 -0500
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" 
+  Rendered articles/examples/_test_content.html.erb (0.0ms)
+  Rendered articles/index/_article.html.erb (0.6ms)
+  Rendered articles/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
