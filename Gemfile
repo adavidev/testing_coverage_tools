@@ -6,7 +6,8 @@ gem 'rails', '3.2.13'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
-
+gem 'coveralls', require: false
+gem 'jquery-rails'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -20,15 +21,9 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'jquery-rails'
-
 group :development, :test do
   gem 'pry'
   gem "rspec-rails"
-end
-
-group :development do
-  gem "webrat"
 end
 
 group :test do

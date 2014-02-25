@@ -4,6 +4,9 @@
 # instead of editing this one. Cucumber will automatically load all features/**/*.rb
 # files.
 require 'simplecov'
+require 'coveralls'
+
+SimpleCov.formatter = Coveralls::SimpleCov::Formatter
 SimpleCov.start
 
 require 'cucumber/rails'
