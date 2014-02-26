@@ -3,7 +3,6 @@ Feature: Blog Management
   As a user
   I want to view blog posts
 
-  @focus
   Scenario: Articles List
     Given I have the following article records
     |title|content|description|
@@ -21,7 +20,6 @@ Feature: Blog Management
     Given I have one article with the title, Test Article, content, test_content, description, "This is a description of the article"
     When I am on the list of articles
     And I click on the link with id "article_1_info"
-    Then I should see a description of the article
 
   Scenario: Article post
     Given I have one article with the title, Test Article, content, test_content, description, "This is a description of the article"
@@ -29,4 +27,3 @@ Feature: Blog Management
     And I click on the link with id "link_to_article_1"
     Then I should see "Test Article"
     And I should see "This is a test of the emegency div rendering system"
-    And I should see "This is a description of the article"

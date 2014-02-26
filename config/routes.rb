@@ -1,6 +1,5 @@
 AlanProfile::Application.routes.draw do
-  match '/', :to => "home#index"
+  match '/', :to => "articles#index"
 
-  get 'profile', :controller => "home", :action => "profile"
   resources :articles
 end

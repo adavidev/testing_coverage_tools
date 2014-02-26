@@ -36,6 +36,9 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
+    cells (3.9.1)
+      actionpack (>= 3.0)
+      railties (>= 3.0)
     coderay (1.1.0)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
@@ -167,6 +170,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  cells
   coffee-rails (~> 3.2.1)
   coveralls
   cucumber-rails
