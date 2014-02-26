@@ -8,8 +8,6 @@ require 'coveralls'
 
 SimpleCov.formatter = Coveralls::SimpleCov::Formatter
 SimpleCov.start :rails do
-  filters.clear # This will remove the :root_filter that comes via simplecov's defaults
-  add_filter 'features/'
 end
 
 require 'cucumber/rails'
