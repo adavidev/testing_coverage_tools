@@ -1,0 +1,14 @@
+<div id="<%= "article_#{@article.id}" %>" class="article-summary-div">
+  <div class="content">
+    <%= render_cell :articles, :example, @article %>
+  </div>
+  <div class="title">
+    <span href=<%= article_path(@article) %>><%= @article.title %></span>
+    <span id="article_<%= @article.id %>_description">
+      <%= @article.description %>
+    </span>
+  </div>
+  <a href="<%= article_path(@article) %>" id="link_to_article_<%= @article.id %>" class="link_overlay"></a>
+  <a href="#" id="article_<%= @article.id %>_info"></a>
+</div>
+

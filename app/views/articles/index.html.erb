@@ -1,5 +1,5 @@
 <div>
   <% @articles.each do |article| %>
-    <%= render partial: "articles/index/article", locals: {article: article} %>
+    <%= render_cell :articles, :summary, article %>
   <% end %>
 </div>
