@@ -1,0 +1,11 @@
+<div id="new_article">
+  <form action="articles/new" method="post" accept-charset="utf-8">
+    <%= label_tag :title, "Title" %>
+    <%= text_field_tag :title %>
+    <%= label_tag :content, "Content" %>
+    <%= text_field_tag :content %>
+    <%= label_tag :description, "Description" %>
+    <%= text_field_tag :description %>
+  <p><input type="submit" value="Continue &rarr;"></p>
+  </form>
+</div>

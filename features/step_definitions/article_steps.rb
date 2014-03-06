@@ -4,6 +4,8 @@ Given /^I have articles titled (.+)$/ do |titles|
   end
 end
 
+Given(/^I have no articles$/) do
+end
 
 When /^I click on the article titled (\w+)$/ do |value|
   click_link value

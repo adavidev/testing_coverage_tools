@@ -2,4 +2,6 @@
   <% @articles.each do |article| %>
     <%= render_cell :articles, :summary, article %>
   <% end %>
+
+  <a href="<%= new_article_path %>" id="link_to_new_article">New Article</a>
 </div>
