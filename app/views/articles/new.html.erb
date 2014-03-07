@@ -1,11 +1,11 @@
 <div id="new_article">
-  <form action="articles/new" method="post" accept-charset="utf-8">
-    <%= label_tag :title, "Title" %>
-    <%= text_field_tag :title %>
-    <%= label_tag :content, "Content" %>
-    <%= text_field_tag :content %>
-    <%= label_tag :description, "Description" %>
-    <%= text_field_tag :description %>
-  <p><input type="submit" value="Continue &rarr;"></p>
-  </form>
+  <%= form_for @article, url: {action: "create"} do |f| %>
+  <%= label_tag :title, "Title" %>
+  <%= f.text_field :title %>
+  <%= label_tag :title, "Content" %>
+  <%= f.text_area :content %>
+  <%= label_tag :title, "Description" %>
+  <%= f.text_area :description %>
+  <%= f.submit "Create" %>
+<% end %>
 </div>

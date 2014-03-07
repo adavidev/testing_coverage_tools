@@ -13,5 +13,6 @@ class ArticlesController < ApplicationController
 
   def create
     Article.create!(params[:article])
+    redirect_to articles_path
   end
 end
