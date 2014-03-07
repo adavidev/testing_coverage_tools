@@ -8,7 +8,15 @@
 </head>
 <body>
 <div id="header">
-  <%= link_to("Articles", articles_path, class: "option selected") %>
+  <div id="nav_links">
+    <%= link_to("Articles", articles_path, class: "option selected") %>
+  </div>
+  <div id="hero_unit">
+    <div id="my_name">
+      Alan Davis
+    </div>
+    <%= render_cell :gravatar, :image, md5: "d1e328d01486568832f4a97060df52df" %>
+  </div>
 </div>
 
 <div id="main-content">
